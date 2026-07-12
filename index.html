@@ -634,9 +634,9 @@
     const ts = '?v=' + Date.now();
     const RAW = 'https://raw.githubusercontent.com/yourusername/portfolio-v1/main/';
     const [profile, certs, projects] = await Promise.all([
-      fetch('data/profile.json'        + ts).then(r => r.json()),
-      fetch('data/certifications.json' + ts).then(r => r.json()),
-      fetch('data/projects.json'       + ts).then(r => r.json()),
+      fetch(RAW +'data/profile.json'        + ts).then(r => r.json()),
+      fetch(RAW +'data/certifications.json' + ts).then(r => r.json()),
+      fetch(RAW +'data/projects.json'       + ts).then(r => r.json()),
     ]);
 
     allProjects   = projects;
